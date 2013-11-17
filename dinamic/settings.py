@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-from django.conf.global_settings import TEMPLATE_DIRS
+from django.conf.global_settings import TEMPLATE_DIRS, STATICFILES_DIRS, STATIC_ROOT
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -32,14 +32,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'django.contrib.admin',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -87,4 +86,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (BASE_DIR + '/dinamic/templates/')
+TEMPLATE_DIRS = (
+    BASE_DIR + '/dinamic/templates/'
+)
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)

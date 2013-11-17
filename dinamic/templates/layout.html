@@ -1,9 +1,38 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <meta charset="utf-8"/>
+    <title>Dinamic Web Application</title>
+    <link rel="stylesheet" type="text/css" href="{% static "css/jquery-ui.min.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/jquery.dataTables.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/custom.css" %}"/>
 </head>
 <body>
-teste de template
+
+<a href="#" class="button">Adicionar Contato</a>
+
+<br>
+<hr>
+<br>
+
+<table id="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+
+<script type="text/javascript" src="{% static "js/jquery-1.9.1.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery-ui.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.dataTables.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/generic.js" %}"></script>
 </body>
 </html>
